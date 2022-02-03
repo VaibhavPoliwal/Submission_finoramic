@@ -1,0 +1,20 @@
+vector<vector<int> > Solution::anagrams(const vector<string> &A) {
+    /*
+    My approch is firt I will make a hash map of each string(IN SORTED MANNER)
+    and for every anagrams strings we have a common sorted string characters
+    I will use that string as an index or use the concept of Hashing
+    */
+
+    unordered_map<string,vector<int>> mymap;
+
+    for(int i=0;i<A.size();i++){
+        string str = A[i];
+        sort(str.begin(),str.end());
+        mymap[str].push_back(i+1);
+    }
+    vector<vector<int>> res;
+    for(auto& itr:mymap){
+        res.push_back(itr.second);
+    }
+    return res;
+}

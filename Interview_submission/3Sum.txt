@@ -1,0 +1,25 @@
+int Solution::threeSumClosest(vector<int> &A, int B) {
+    // first we sort the vector
+    sort(A.begin(),A.end());
+    int diff=INT32_MAX;
+    int closeValue;
+    for(int i=0;i<A.size()-2;i++){
+
+        int l=i+1,r=A.size()-1;
+        while(l<r){
+            int sum = A[i]+A[l]+A[r];
+            int curr_diff = abs(B-sum);
+            if(curr_diff<diff){
+                diff = curr_diff;
+                closeValue = sum;
+            }
+            if(sum<B) l++;
+            else if(sum>B) r--;
+            if(sum==B){
+                return B;  // When sum = B then closes sum is zero 
+            } 
+            
+        }
+    }
+    return closeValue;
+}
