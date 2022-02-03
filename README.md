@@ -12,5 +12,5 @@ Now python packages are installin according to their version
 
 2. Interview-bit submission of two problems
 My profile:
-!(Interview_submission/Interview-bit profile.png)
+![](Interview_submission/Interview-bit profile.png)
 My profile link -> https://www.interviewbit.com/profile/Vpoliwal
